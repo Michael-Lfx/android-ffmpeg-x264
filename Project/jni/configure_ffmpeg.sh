@@ -9,7 +9,8 @@ if [[ $minimal_featureset == 1 ]]; then
 --enable-demuxer=image2 --enable-muxer=mp4 --enable-encoder=libx264 --enable-libx264 \
 --enable-decoder=rawvideo \
 --enable-protocol=file \
---enable-hwaccels"
+--enable-hwaccels \
+--extra-cflags=../x264"
 fi
 
 if [[ $DEBUG == 1 ]]; then
@@ -46,7 +47,7 @@ $featureflags \
 --disable-demuxer=v4l2 \
 --disable-indev=v4l \
 --disable-indev=v4l2 \
---extra-cflags="-I../x264 -Ivideokit" \
---extra-ldflags="-L../x264" 
+--extra-cflags="-I/usr/local/include -Ivideokit" \
+--extra-ldflags="-L/usr/local/lib" 
 
 popd; popd
