@@ -9,7 +9,8 @@ if [[ $minimal_featureset == 1 ]]; then
 --enable-demuxer=image2 --enable-muxer=mp4 --enable-encoder=libx264 --enable-libx264 \
 --enable-decoder=rawvideo \
 --enable-protocol=file \
---enable-hwaccels"
+--enable-hwaccels \
+--extra-cflags=../x264"
 fi
 
 if [[ $DEBUG == 1 ]]; then
